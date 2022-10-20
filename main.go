@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	rand2 "math/rand"
 	"net/http"
 	"os"
 )
@@ -43,10 +44,8 @@ func handler(w http.ResponseWriter, req *http.Request) {
 func play(input ArenaUpdate) (response string) {
 	log.Printf("Request body: %#v", input)
 
-	// commands := []string{"F", "R", "L", "T"}
-	// rand := rand2.Intn(4)
+	commands := []string{"F", "R", "L", "T"}
+	rand := rand2.Intn(4)
 
-	// return commands[rand]
-
-	return "T"
+	return commands[rand]
 }
