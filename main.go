@@ -42,11 +42,11 @@ func handler(w http.ResponseWriter, req *http.Request) {
 }
 
 func play(input ArenaUpdate) (response string) {
-	log.Printf("IN: %#v", input)
+	log.Printf("Request: %#v", input)
 
 	commands := []string{"F", "R", "L", "T"}
 	rand := rand2.Intn(4)
-	
+
 	// TODO add your implementation here to replace the random response
 	return commands[rand]
 }
